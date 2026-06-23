@@ -65,6 +65,7 @@ def download_playlist_to_server(playlist_url, log_box, metrics_box, progress_bar
         # Server ပေါ်မှာ Playlist Name နဲ့ Folder ဆောက်ပြီး ဒေါင်းပါမယ်
         'outtmpl': os.path.join(TMP_DOWNLOAD_DIR, '%(playlist_title)s', '%(playlist_index)s - %(title)s.%(ext)s'),
         
+        'cookiefile': 'cookies.txt',
         'ignoreerrors': True,
         'continuedl': True,         
         'no_overwrites': True,       
