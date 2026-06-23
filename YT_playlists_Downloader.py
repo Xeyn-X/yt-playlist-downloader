@@ -61,7 +61,9 @@ def download_playlist_to_server(playlist_url, log_box, metrics_box, progress_bar
                 progress_bar.progress(current / total)
 
     ydl_opts = {
-        'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+        'format': 'bestvideo+bestaudio/best',
+        'merge_output_format': 'mp4',
+        
         # Server ပေါ်မှာ Playlist Name နဲ့ Folder ဆောက်ပြီး ဒေါင်းပါမယ်
         'outtmpl': os.path.join(TMP_DOWNLOAD_DIR, '%(playlist_title)s', '%(playlist_index)s - %(title)s.%(ext)s'),
         
